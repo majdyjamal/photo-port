@@ -15,7 +15,7 @@ const Nav = () => {
     return (
         <header>
             <h2>
-                <a href="/">
+                <a href="/" data-testid="link">
                     <span role="img" aria-label="camera" >📸</span> Oh Snap!
                 </a>
             </h2> 
@@ -23,11 +23,11 @@ const Nav = () => {
                 <ul className="flex-row">
                     { /* About page */ }
                     <li className="mx-2">
-                        <a href="#about">About me</a>
+                        <a href="#about"  data-testid="about">About me</a>
                     </li>
                     { /* Contact page */ }
                     <li>
-                        <span>Contact</span>
+                        <span>Contact me</span>
                     </li>
                     { /* List the rest of the Categories */ }
                     {
