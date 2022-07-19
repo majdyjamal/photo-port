@@ -2,12 +2,9 @@ import React from "react";
 import { capitalizeFirstLetter } from "../../utils/helpers.js"
 import photo from "../../assets/small/commercial/0.jpg";
 
-const Gallery = () => {
-    const currentCategory = {
-        name: "commercial",
-        description:
-          "Photos of grocery stores, food trucks, and other commercial projects",
-      };
+const Gallery = (props ) => {
+
+    const {currentCategory} = props;
 
     return (
         <section>
