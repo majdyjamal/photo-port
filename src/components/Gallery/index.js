@@ -1,8 +1,8 @@
 import React from "react";
 import { capitalizeFirstLetter } from "../../utils/helpers.js"
-import photo from "../../assets/small/commercial/0.jpg";
+import PhotoList from "../PhotoList/index.js";
 
-const Gallery = (props ) => {
+const Gallery = (props) => {
 
     const {currentCategory} = props;
 
@@ -10,9 +10,7 @@ const Gallery = (props ) => {
         <section>
             <h1>{capitalizeFirstLetter(currentCategory.name)}</h1>
             <p>{currentCategory.description}</p>
-            <div  className="flex-row">
-                <img src={photo} alt={currentCategory.description} className="img-thumbnail mx-1"/>
-            </div>
+            <PhotoList category = {currentCategory.name} />
         </section>
     );
 }
