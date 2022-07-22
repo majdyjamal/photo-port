@@ -50,7 +50,7 @@ const ContactForm = () => {
                 </div>
                 <div>
                     <label htmlFor="email">Email address:</label>
-                    <input type="email" name="email"  defaultValue={email} onBlur={handleChange}/>
+                    <input type="email" name="email" data-testid="email" defaultValue={email} onBlur={handleChange}/>
                 </div>
                 <div>
                     <label htmlFor="message">Message:</label>
@@ -58,7 +58,7 @@ const ContactForm = () => {
                 </div>
                 {errorMessage && (
                     <div>
-                        <p className="error-text">{errorMessage}</p>
+                        <p className="error-text"  data-testid="errormessage">{errorMessage}</p>
                     </div>
                 )}
 
