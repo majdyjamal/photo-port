@@ -3,6 +3,8 @@ import './App.css';
 import About from './components/About';
 import Nav from './components/Nav';
 import Gallery from './components/Gallery';
+import ContactForm from './components/Contact';
+
 
 
 function App() {
@@ -15,13 +17,27 @@ function App() {
   ]);
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const [contactSelected, setContactSelected] = useState(false);  
 
   return (
     <div>
-      <Nav categories = {categories} currentCategory= {currentCategory} setCurrentCategory={setCurrentCategory}></Nav>
+      <Nav 
+        categories = {categories} 
+        currentCategory= {currentCategory} 
+        setCurrentCategory={setCurrentCategory}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
+      >
+      </Nav>
       <main>
-        <Gallery currentCategory= {currentCategory} ></Gallery>
-        <About></About>
+        {!contactSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+            <ContactForm></ContactForm>
+        )}
       </main>
     </div>
   );
